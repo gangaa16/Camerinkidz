@@ -1,0 +1,48 @@
+.programs {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile devices */
+  }
+  
+  .program {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 16px;
+    background-color:  #212EA0;
+    color: #fff;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .program:hover {
+    transform: translateX(10px);
+    background-color:  #909bfa;
+  }
+  
+  .program img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .program p {
+    padding: 16px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .programs {
+      overflow-x: auto;
+    }
+  
+    .program {
+      max-width: none;
+      margin-right: 0;
+    }
+  }
